@@ -11,17 +11,22 @@ body {
     height: 200px; 
     width: 200px;
     background: #ffff24;
+
+    /* Setting one property at a time */
     /* transition-property: all; */
     /* transition-property: width background transform;
     transition-timing-function: ease-in-out;
     transition-delay: 200ms;
     transition-duration: 500ms; */
 
+    /* define transitions on a single line - property duration timing-function delay - separated by comma */
     transition: width 500ms ease-in-out 200ms, background 500ms ease-in-out 200ms, transform 500ms ease-in-out 200ms;
 
+    /* defined transition on a single line - all properties */
     /* transition: all 500ms ease-in-out 200ms; */
 }
 
+/* hover is a pseudo class (which is a special state of the element in which the element has to find itself)*/
 .box:hover {
     background: #1eb143;
     width: 400px;
