@@ -1,0 +1,29 @@
+.welcome {
+    color: white;
+}
+
+body {
+    background: black;
+}
+
+.box {
+    margin-left: 450px;
+    height: 200px; 
+    width: 200px;
+    background: #ffff24;
+    /* transition-property: all; */
+    /* transition-property: width background transform;
+    transition-timing-function: ease-in-out;
+    transition-delay: 200ms;
+    transition-duration: 500ms; */
+
+    transition: width 500ms ease-in-out 200ms, background 500ms ease-in-out 200ms, transform 500ms ease-in-out 200ms;
+
+    /* transition: all 500ms ease-in-out 200ms; */
+}
+
+.box:hover {
+    background: #1eb143;
+    width: 400px;
+    transform: rotate(135deg);
+}

@@ -1,0 +1,53 @@
+.fixed-hello {
+    margin: 0px;
+    font-size: 50px;
+    position: fixed;
+    top: 20px;
+    left: 150px;
+}
+
+.sticky-greetings {
+    margin: 0px;
+    font-size: 50px;
+    position: sticky;
+    top: 20px;
+    left: 300px;
+    width: max-content;
+}
+
+.relative-ol {
+    list-style-type: square;
+    position: relative;
+    left: 10px;
+    top: 5px;
+}
+
+.relative-searchbar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+}
+
+input {
+    width: max-content;
+}
+
+.absolute-ring {
+    border: 2px solid black;
+    border-radius: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: aqua;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -4px;
+    top: -4px;
+    z-index: 5;
+    cursor: pointer;
+}
+
+section {
+    width: 50px;
+}
