@@ -8,4 +8,6 @@ Examples:
 ::before - places a new element before the selected element
 ::after - places a new element after the selected element
 
-Video inspiration: [click here](https://youtu.be/dIUOWdwwZBw?si=Q1eXQARIC4QSYV83)
+Video inspiration: 
+- [click here](https://youtu.be/dIUOWdwwZBw?si=Q1eXQARIC4QSYV83)
+- [click here for gradient button](https://youtu.be/PTVXnOrQoBQ?si=Osk4pvubZJnXHQqF)

@@ -57,3 +57,101 @@ ol li::before {
     align-items: center;
     /* justify-items: center; */
 }
+
+/* gradient button */
+.gradient-btn-section {
+    background-color: black;
+    height: 250px;
+    padding: 50px 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1; /* z-index necessary here */
+}
+
+.gradient-btn {
+    margin-top: 50px;
+    margin-left: 20px;
+    border: none;
+    background-color: rgba(134, 120, 120, 0.822);
+    color: white;
+    padding: 1em 2em;
+    border-radius: 1000px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    /* no z-index here */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.gradient-btn::after {
+    content: '';
+    position: absolute;
+    height: 107%;
+    width: 103%;
+    border-radius: 1000px;
+    background-image: linear-gradient(to bottom, #008cff, #e100ff);
+    z-index: -1; /* z-index necessary here so it falls behind the button */
+}
+
+.gradient-btn:hover {
+    z-index: 0;
+    box-shadow: 40px 0px 80px #008cffd3, -40px 0px 80px rgba(213, 7, 240, 0.603);
+}
+
+
+/* transition button */
+.transition-btn-section {
+    background-color: black;
+    height: 250px;
+    padding: 50px 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1; /* z-index necessary here */
+}
+
+.transition-btn {
+    position: relative;
+    background-image: linear-gradient(to right, #548aff, #3f5af3);
+    padding: 1em 2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    z-index: 0;
+    color: white;
+    cursor: pointer;
+
+    transition: color 300ms ease-in-out 0.2s;
+}
+
+.transition-btn::after {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to right, #ffee00, #ffb300);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 2px;
+    z-index: -1;
+
+    transition: width 500ms ease-in-out 0.2s;
+}
+
+.transition-btn:hover {
+    color: black;
+}
+
+.transition-btn:hover::after {
+    width: 100%;
+}
