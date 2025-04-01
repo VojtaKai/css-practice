@@ -1,18 +1,230 @@
-body {
-    background-image: url('paradise_2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top left;
-    background-attachment: fixed;
+/* Utility classes */
+.animate {
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
 
-.welcome {
-    margin-top: 130px;
-    padding-top: 10px;
-    color: rgb(243, 243, 225);
+/* It now works only if the element has animate class */
+.animate.animate--infinate {
+    animation-iteration-count: infinite;
+}
+/* It now works only if the element has animate class */
+.animate.animate--delay-1s {
+    animation-delay: 1s;
+}
+/* It now works only if the element has animate class */
+.animate.animate--fast {
+    animation-duration: 0.6s;
+}
+/* It now works only if the element has animate class */
+.animate.animate--slow {
+    animation-duration: 3s;
 }
 
-p {
-    color: rgb(243, 243, 225);
-    width: 250px;
+/* Animations */
+@keyframes slideInLeft {
+    /* represents the beginning state of the animation */ 
+    from {
+        transform: translateX(-800px);
+    }
+
+    /* represents the end state of the animation */ 
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    /* represents the beginning state of the animation */ 
+    from {
+        transform: translateX(800px);
+    }
+
+    /* represents the end state of the animation */ 
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes rotate {
+    /* represents the beginning state of the animation */ 
+    from {
+        transform: rotate(0);
+    }
+
+    /* represents the end state of the animation */ 
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+    /* represents the beginning state of the animation */ 
+    0%,
+    20%,
+    50%,
+    70%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+
+    80% {
+        transform: translateY(-5px);
+    }
+}
+
+.animation-section-1,
+.animation-section-2,
+.animation-section-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.animation-section-1 {
+    height: 250px;
+    width: 100%;
+}
+
+.slideInLeft {
+    /* all animation properties + explanations */
+    /* animation-name: slideInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-iteration-count: 1 2 infinite; number of slide-ins - 1, 2, repeat forever
+    animation-direction: normal; 
+    normal - takes into affect other effect
+    forwards - affects only start of the transition, end state is taken from the animation
+    both - start and end state is taken from the animation, no other effects are effective */
+    
+    /*short hand*/
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    /* animation: slideInLeft 1s ease-in 0.6s 1 normal both; */
+
+    /* using utility classes */
+    animation-name: slideInLeft;
+    animation-timing-function: ease-in;
+
+    /* transform: translateX(-150px); */
+}
+
+.slideInRight {
+    /* using utility classes */
+    animation-name: slideInRight;
+    animation-timing-function: ease-in;
+}
+
+.rotate {
+    animation-name: rotate;
+    animation-timing-function: linear;
+
+    /* transform-origin: top left; */
+}
+
+.bounce {
+    animation-name: bounce;
+}
+
+/* Second section */
+.animation-section-2 {
+    height: 700px;
+    width: 100%;
+}
+
+@keyframes spin {
+    0% {
+
+    }
+
+    50% {
+        scale: 2;
+        transform: rotate(0);
+        border-radius: 0%;
+    }
+
+    100% {
+        scale: 2;
+        transform: rotate(360deg);
+        border-radius: 50%;
+    }
+}
+
+.icon {
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 1.35rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+/* .icon:hover {
+    animation-play-state: paused;
+} */
+
+.icon-buttons {
+    margin-top: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Third section */
+.animation-section-3 {
+    height: 700px;
+    width: 100%;
+}
+
+@keyframes crazyspin {
+    0% {
+        transform: rotateX() rotateY(0) rotateZ(0);
+    }
+
+    33% {
+        transform: rotateX(180deg) rotateY(0) rotateZ(0);
+    }
+
+    67% {
+        transform: rotateX(180deg) rotateY(180deg) rotateZ(0);
+    }
+
+    100% {
+        transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+    }
+}
+
+.glowing-box {
+    height: 80px;
+    width: 80px;
+    background: transparent;
+    border: 10px solid #1eb938;
+    border-radius: 5px;
+    box-shadow: #139628 0 0 5px 2px;
+
+    animation-name: crazyspin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }

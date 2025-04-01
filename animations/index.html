@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
-    <title>Document</title>
+    <script src="script.js" defer></script>
+    <title>Animations</title>
 </head>
 <body>
-    <h1 class="welcome">Welcome to Animations</h1>
+    <section class="animation-section-1">
+        <h1 class="animate slideInLeft bounce animate--fast">Welcome to Animations</h1>
+        <h2 class="animate slideInRight animate--delay-1s animate--fast">Welcome to Animations 2</h2>
+        <h3 class="animate rotate animate--infinate animate--slow">Welcome to Animations 3</h3>
+    </section>
+    <section class="animation-section-2">
+        <div class="icon">coding2go.com</div>
+        <div class="icon-buttons">
+            <button id="play-button">Play</button>
+            <button id="pause-button">Pause</button>
+        </div>
+    </section>
+    <section class="animation-section-3">
+        <div class="glowing-box"></div>
+    </section>
 </body>
 </html>

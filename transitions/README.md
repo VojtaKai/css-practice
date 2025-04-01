@@ -1,7 +1,9 @@
 Transitions are applied between two states for selected properties
 
+In CSS terms, it is the change between the regular state and the hover/active state
+
 Transition property
-- for which changes apply the transition setting, e.g. width, background, all
+- for which changes apply the transition setting, e.g. width, background, transform, all
 
 Timing functions
 - ease (default)
