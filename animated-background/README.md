@@ -30,5 +30,4 @@ Define Animations
 }
 
 Video inspiration:
-- [Intro to Transition and Animation plus Utility Classes](https://youtu.be/SgmNxE9lWcY?si=7hT6tgiA_khJOCdj)
-- [More granular control](https://youtu.be/z2LQYsZhsFw?si=5EakT8ALEBNQ50dO)
+- [Animated background](https://youtu.be/qx7pSLjLNQA?si=0-YhZMUUCrCqPU5U)
