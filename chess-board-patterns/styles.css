@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.pattern {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.pattern-1 {
+    /* background-image: conic-gradient(black 0 90deg, white 90deg 180deg, black 180deg 270deg, white 270deg 360deg); */
+    /* background-image: repeating-conic-gradient(black 0 25%, white 25% 50%); */
+    background-image: 
+        linear-gradient(transparent 0% 49%, #f8edd1 49% 50%, transparent 50%), 
+        linear-gradient(to right, transparent 0% 49%, #f8edd1 49% 50%, transparent 50%),
+        linear-gradient(to right top, transparent 0% 48%, #f8edd1 48% 52%, transparent 52%),
+        linear-gradient(to right bottom, transparent 0% 48%, #f8edd1 48% 52%, transparent 52%),
+        repeating-conic-gradient(from 45deg, black 0 25%, rgb(16, 175, 69) 25% 50%);
+    background-size: 80px 80px;
+}
