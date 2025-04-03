@@ -1,0 +1,48 @@
+body {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.title {
+    font-family: Poppins;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 5rem;
+}
+
+.subtitle {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+}
+
+
+@media screen and (orientation: landscape) {
+    .title {
+        color: red
+    }
+}
+
+@media screen and (orientation: portrait), screen and (max-width: 400px) {
+    .subtitle {
+        color: blue
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* the media type has to be allowed in index.html for the stylesheet - now set to all, before set to screen */
+@media print {
+    body {
+      color: cyan
+    }
+}
